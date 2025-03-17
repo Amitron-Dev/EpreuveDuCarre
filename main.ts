@@ -7,7 +7,7 @@ input.onButtonPressed(Button.AB, function () {
     tours = 0
     basic.showNumber(tours)
 })
-input.onButtonPressed(Button.B, function () {
+input.onLogoEvent(TouchButtonEvent.Pressed, function () {
     for (let index = 0; index < tours; index++) {
         for (let index = 0; index < 4; index++) {
             basic.showNumber(tours)
@@ -17,8 +17,8 @@ input.onButtonPressed(Button.B, function () {
             Kitronik_Move_Motor.stop()
             Kitronik_Move_Motor.motorOff(Kitronik_Move_Motor.Motors.MotorLeft)
             if (tours == tours - 0) {
-                Kitronik_Move_Motor.motorOn(Kitronik_Move_Motor.Motors.MotorRight, Kitronik_Move_Motor.MotorDirection.Forward, 39)
-                basic.pause(540)
+                Kitronik_Move_Motor.motorOn(Kitronik_Move_Motor.Motors.MotorRight, Kitronik_Move_Motor.MotorDirection.Forward, 40)
+                basic.pause(600)
                 Kitronik_Move_Motor.stop()
             }
         }
