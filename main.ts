@@ -15,12 +15,11 @@ input.onLogoEvent(TouchButtonEvent.Pressed, function () {
             Kitronik_Move_Motor.motorOn(Kitronik_Move_Motor.Motors.MotorRight, Kitronik_Move_Motor.MotorDirection.Forward, 40)
             basic.pause(2250)
             Kitronik_Move_Motor.stop()
-            Kitronik_Move_Motor.motorOff(Kitronik_Move_Motor.Motors.MotorLeft)
-            if (tours == tours - 0) {
-                Kitronik_Move_Motor.motorOn(Kitronik_Move_Motor.Motors.MotorRight, Kitronik_Move_Motor.MotorDirection.Forward, 40)
-                basic.pause(600)
-                Kitronik_Move_Motor.stop()
-            }
+            Kitronik_Move_Motor.motorOn(Kitronik_Move_Motor.Motors.MotorRight, Kitronik_Move_Motor.MotorDirection.Forward, 40)
+            basic.pause(20)
         }
+    }
+    if (tours == 0) {
+        Kitronik_Move_Motor.stop()
     }
 })
