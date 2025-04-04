@@ -17,6 +17,7 @@ input.onLogoEvent(TouchButtonEvent.Pressed, function () {
             Kitronik_Move_Motor.stop()
             Kitronik_Move_Motor.motorOn(Kitronik_Move_Motor.Motors.MotorRight, Kitronik_Move_Motor.MotorDirection.Forward, 40)
             basic.pause(10)
+            tours = tours - 1
         }
     }
     if (tours == 0) {
