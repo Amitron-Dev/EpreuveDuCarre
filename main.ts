@@ -10,12 +10,13 @@ input.onLogoEvent(TouchButtonEvent.Pressed, function () {
     for (let index = 0; index < tours; index++) {
         for (let index = 0; index < 4; index++) {
             basic.showNumber(tours)
-            Kitronik_Move_Motor.motorOn(Kitronik_Move_Motor.Motors.MotorLeft, Kitronik_Move_Motor.MotorDirection.Forward, 40)
-            Kitronik_Move_Motor.motorOn(Kitronik_Move_Motor.Motors.MotorRight, Kitronik_Move_Motor.MotorDirection.Forward, 40)
+            Kitronik_Move_Motor.motorOn(Kitronik_Move_Motor.Motors.MotorLeft, Kitronik_Move_Motor.MotorDirection.Forward, 60)
+            Kitronik_Move_Motor.motorOn(Kitronik_Move_Motor.Motors.MotorRight, Kitronik_Move_Motor.MotorDirection.Forward, 60)
+            basic.pause(500)
+            Kitronik_Move_Motor.stop()
+            Kitronik_Move_Motor.motorOn(Kitronik_Move_Motor.Motors.MotorRight, Kitronik_Move_Motor.MotorDirection.Forward, 30)
             basic.pause(1000)
             Kitronik_Move_Motor.stop()
-            Kitronik_Move_Motor.spin(Kitronik_Move_Motor.SpinDirections.Left, 20)
-            basic.pause(5)
         }
     }
 })
